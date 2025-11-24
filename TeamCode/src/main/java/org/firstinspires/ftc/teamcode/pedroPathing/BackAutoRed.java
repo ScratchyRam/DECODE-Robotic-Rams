@@ -16,8 +16,8 @@ import com.qualcomm.robotcore.hardware.Servo;
 
 import java.util.ArrayList;
 
-@Autonomous(name="ObeliskAutoBlue", group="Linear OpMode")
-public class ObeliskAutoBlue extends OpMode {
+@Autonomous(name="BackAutoRed", group="Linear OpMode")
+public class BackAutoRed extends OpMode {
     //Electronic Variables
     //Motors
     private DcMotorEx topMotor;
@@ -35,13 +35,13 @@ public class ObeliskAutoBlue extends OpMode {
     private long thirdShot = secondShot * 2;
     private int pathState;
 
-    private final Pose startPose = new Pose(48, 8, Math.toRadians(270)); // Start Pose of our robot.
-    private final Pose scorePose = new Pose(63, 87, Math.toRadians(314)); // Scoring Pose of our robot. It is facing the goal at a 135 degree angle.
-    private final Pose pickup1APose = new Pose(30.5, 86, Math.toRadians(180));
-    private final Pose pickup1BPose = new Pose(22, 86, Math.toRadians(180));
-    private final Pose pickup1CPose = new Pose(12, 86, Math.toRadians(180));// Highest (First Set) of Artifacts from the Spike Mark.
-    private final Pose pickup2Pose = new Pose(14, 68, Math.toRadians(180)); // Middle (Second Set) of Artifacts from the Spike Mark.
-    private final Pose pickup3Pose = new Pose(14, 42, Math.toRadians(180)); // Lowest (Third Set) of Artifacts from the Spike Mark.
+    private final Pose startPose = new Pose(96, 8, Math.toRadians(270)); // Start Pose of our robot.
+    private final Pose scorePose = new Pose(81, 87, Math.toRadians(226)); // Scoring Pose of our robot. It is facing the goal at a 135 degree angle.
+    private final Pose pickup1APose = new Pose(113.5, 86, Math.toRadians(0));
+    private final Pose pickup1BPose = new Pose(122, 86, Math.toRadians(0));
+    private final Pose pickup1CPose = new Pose(132, 86, Math.toRadians(0));// Highest (First Set) of Artifacts from the Spike Mark.
+    private final Pose pickup2Pose = new Pose(14, 68, Math.toRadians(0)); // Middle (Second Set) of Artifacts from the Spike Mark.
+    private final Pose pickup3Pose = new Pose(14, 42, Math.toRadians(0)); // Lowest (Third Set) of Artifacts from the Spike Mark.
 
     private Path scorePreload;
     private PathChain grabPickup1, grabPickup1A, grabPickup1B, scorePickup1, grabPickup2, scorePickup2, grabPickup3, scorePickup3;
